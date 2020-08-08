@@ -5,11 +5,6 @@ DIR=$0:A
 
 CFLAGS="--silent --fail -H User-Agent:dirkx-check/1.00"
 
-if [ "x$1" = "x--kpn" ]; then
-	echo "** VIA KPN ***"
-	CFLAGS+=" --resolve test.coronamelder-dist.nl:443:195.121.65.176"
-	shift
-fi
 ENVIRONMENT=test
 mydir=${0:a:h}
 if [ $# = 1 ]; then
