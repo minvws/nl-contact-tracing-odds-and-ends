@@ -1,18 +1,131 @@
 #!/usr/bin/env perl
 
 use JSON;
+use MIME::Base64;
 use Data::Dumper;
+use Google::ProtocolBuffers;
+
+Google::ProtocolBuffers->parse(join('',<DATA>), {create_accessors => 1 });
 
 $json = JSON->new->allow_nonref;
 
 die "Syntax: $0 <dir-with-tek-zips [dir .. ] $#ARGV>\n"
 	unless $#ARGV >=0 ;
 
+$teks = {};
+for my $dir (@ARGV) {
+	for my $f (<$dir/eks-*.export-protoc>) {
+		$f =~ m/eks-(.*).export-protoc/;
+		my $h = $1;
+		# open my($fh), $f or die "Could not open $f";
+		# $msg = TemporaryExposureKeyExport->decode(<$fh>) or die "Could not decode protoc in $f";
+		# close($fh);
+		open(FH,"cat '$f' | protoc --decode TemporaryExposureKeyExport gaen.protoc |") or die;
+		$_=join('',<FH>);
+		close(FH);
+# keys {
+#   key_data: "\205\356G+\353o\332j\\\245\177\310}$\257V"
+#   transmission_risk_level: 3
+#   rolling_start_interval_number: 2661264
+#   rolling_period: 72
+# }
+		while(m/keys \{(.+?)\}\n/sg) {
+			my $p = $1;
+			die "choke on <$p>" unless $p =~ m/key_data\s*:\s*"([^\n]*)\"\n/;
+			my $key = $1;
+			$key =~ s/\\([0-7]{3})/chr(oct($1))/ge;
+			$key =~ s/\\(.)/$1/g;
+
+			die "Wrong len in file $f\n" if (length($key) != 16);
+			# print" $p --> " if (length($key) != 16);
+
+			$key = encode_base64($key); chomp $key;
+			# print "$key\n";
+
+			$teks->{$key} = {
+				dirs => {},
+				files => []
+			} unless defined $teks->{$key};
+			$teks->{$key}->{dirs}->{$dir} = 1;
+			push @{$teks->{$key}->{files}}, "$dir/$h";
+			map {
+				die "Missing $_ in $f" unless
+					$p =~ m/$_\s*:\s*(\d+)/;
+				$teks->{$key}->{$_} = $1;
+			} ('rolling_start_interval_number', 'transmission_risk_level', 'rolling_period');
+
+		};
+# keys {
+#   key_data: "VWS\342\235\244\357\270\217you\010\006\010\000"
+#   transmission_risk_level: 3
+#   rolling_start_interval_number: 2661168
+#   rolling_period: 72
+# }
+		};
+	};
+
 $postteks = $json->decode(join('',<STDIN>));
 
 die "No keys" unless $postteks->{keys};
 
+# print Dumper($teks);
+
 for my $e (@{$postteks->{"keys"}}) {
-	printf "%20s %4d %7d\n", $e->{keyData}, $e->{rollingPeriod},$e->{rollingStartNumber};
+	$dirs = "not found"; $files = "";
+	if (exists $teks->{$e->{keyData}}) {
+		$dirs = join(',', keys(%{ $teks->{$e->{keyData}}->{dirs}  }));;
+		$files = join(',',     @{ $teks->{$e->{keyData}}->{files} });
+	};
+	printf "%20s %4d %7d %s %s\n", $e->{keyData}, $e->{rollingPeriod},$e->{rollingStartNumber}, $dirs, $files;
 };
+
+__DATA__
+syntax = "proto2";
+
+message TemporaryExposureKeyExport {
+  optional fixed64 start_timestamp = 1;
+  optional fixed64 end_timestamp = 2;
+  optional string region = 3;
+  optional int32 batch_num = 4;
+  optional int32 batch_size = 5;
+  repeated SignatureInfo signature_infos = 6;
+  repeated TemporaryExposureKey keys = 7;
+  repeated TemporaryExposureKey revised_keys = 8;
+}
+
+message SignatureInfo {
+  // reserved 1, 2;
+  // reserved "app_bundle_id", "android_package";
+  optional string verification_key_version = 3;
+  optional string verification_key_id = 4;
+  optional string signature_algorithm = 5;
+}
+
+message TemporaryExposureKey {
+  optional bytes key_data = 1;
+  optional int32 transmission_risk_level = 2 [deprecated = true];
+  optional int32 rolling_start_interval_number = 3;
+  optional int32 rolling_period = 4 [default = 144]; 
+  enum ReportType {
+    UNKNOWN = 0;  
+    CONFIRMED_TEST = 1;
+    CONFIRMED_CLINICAL_DIAGNOSIS = 2;
+    SELF_REPORT = 3;
+    RECURSIVE = 4;
+    REVOKED = 5; 
+  }
+  optional ReportType report_type = 5;
+  optional sint32 days_since_onset_of_symptoms = 6;
+}
+
+message TEKSignatureList {
+  repeated TEKSignature signatures = 1;
+}
+
+message TEKSignature {
+  optional SignatureInfo signature_info = 1;
+  optional int32 batch_num = 2;
+  optional int32 batch_size = 3;
+  optional bytes signature = 4;
+}
 
