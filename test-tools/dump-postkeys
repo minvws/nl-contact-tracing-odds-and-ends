@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+(
+	if [ $# -gt 0 ];	then
+		cat $*
+	else
+		pbpaste
+) | json_pp | (
+while read L
+do
+	if echo $L | grep -q padding; then
+		continue
+	fi
+	if echo $L | grep -q signature:; then
+		R=`echo $L | sed -e 's/^ *signature: "//' -e 's/"$//' -e 's/ /\\ /g' `
+		print -n $R |base64
+		continue
+	fi
+	echo $L
+done
+) | json_pp

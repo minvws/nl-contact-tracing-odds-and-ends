@@ -1,0 +1,18 @@
+#!/usr/bin/env perl
+
+use JSON;
+use Data::Dumper;
+
+$json = JSON->new->allow_nonref;
+
+die "Syntax: $0 <dir-with-tek-zips [dir .. ] $#ARGV>\n"
+	unless $#ARGV >=0 ;
+
+$postteks = $json->decode(join('',<STDIN>));
+
+die "No keys" unless $postteks->{keys};
+
+for my $e (@{$postteks->{"keys"}}) {
+	printf "%20s %4d %7d\n", $e->{keyData}, $e->{rollingPeriod},$e->{rollingStartNumber};
+};
+
