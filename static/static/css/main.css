@@ -1,0 +1,82 @@
+.image-background {
+    /* We cannot use just 'background:' here because that would overwrite the background-color */
+    background-image: url("../img/plaatje.svg");
+    background-repeat: no-repeat;
+    background-position: 105% 60%;
+    background-size: 55%;
+}
+@media (max-width: 768px) {
+    .image-background {
+        background-image: none;
+    }
+}
+.header-logo a::before {
+    background: url('../img/logo.svg') no-repeat bottom;
+}
+.header-logo a::after {
+    background: none;
+}
+.top-nav > .container > .content-background {
+    background: none;
+}
+.icon-slack {
+    background-repeat: no-repeat;
+    background-size: 24px;
+    margin-left: .6rem;
+    margin-right: .6rem;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Slack_Mark_Monochrome_White.svg");
+}
+.icon-github {
+    background-repeat: no-repeat;
+    background-size: 24px;
+    margin-left: .6rem;
+    margin-right: .6rem;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/GitHub-Mark-Light-32px.png");
+}
+.icon-trello{
+    background-repeat: no-repeat;
+    background-size: 24px;
+    margin-left: .6rem;
+    margin-right: .6rem;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/trello-mark-white.svg");
+}
+
+.footer__content {
+  color: black;
+  background: #ffb612; /* Workaround bug in UNO */
+}
+
+.hero {
+    margin-top: -2rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 2rem;
+}
+
+.event time {
+  font-style: italic;
+  line-height: 3rem;
+}
+
+figcaption {
+  font-size: 2.3rem;
+  line-height: 3rem;
+  font-style: italic;
+  margin-top: 3rem;
+  margin-left: 0;
+}
+
+figure img {
+  margin: 0 auto;
+}
+
+ul.sharing li {
+  display: inline-block;
+  margin-right: 2rem;
+}
