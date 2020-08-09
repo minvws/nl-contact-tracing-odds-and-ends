@@ -2,7 +2,7 @@
 #
 TMPDIR=${TMPDIR:-/tmp}
 #
-URL=https://test.coronamelder-api.nl
+URL=${ODDS_ENDS_ENDPOINT_API:-https://test.coronamelder-api.nl/v1}
 
 set -e
 if [ $# -gt 1 ]; then
@@ -23,7 +23,7 @@ curl  -X POST \
 	--silent  \
 	--data @- \
 	-H 'Content-Type: application/json' \
-	$URL/v1/register |\
+	$URL/register |\
 	json_pp |\
 	grep  labConfirmationId | sed -e 's/.*: //' -e 's/"//g' -e 's/,$//' 
 done
