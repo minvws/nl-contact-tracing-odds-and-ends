@@ -3,7 +3,7 @@
 testscripts_path="../test-tools"
 testscripts="patch-static-html-testscript.sh"
 outdir=$(mktemp -d -t run-XXXXXXX)
-static_out=templates
+static_out="static_out"
 
 echo "INFO: generating static html"
 
@@ -25,9 +25,8 @@ done
 echo "INFO: phase 2 = collect output"
 
 if test -f ${outdir}/${testscript}.out; then
-    cp ${outdir}/${testscript}.out ${static_out}/${testscript}.html
+    cp ${outdir}/${testscript}.out templates/${testscript}.html
 fi
-
 
 echo "INFO: phase 3 = generate static html"
 python serve.py &
