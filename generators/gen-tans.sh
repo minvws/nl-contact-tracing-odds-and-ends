@@ -23,7 +23,7 @@ curl  -X POST \
 	--silent  \
 	--data @- \
 	-H 'Content-Type: application/json' \
-	$URL/mss-acc/v1/register |\
+	$URL/v1/register |\
 	json_pp |\
 	grep  labConfirmationId | sed -e 's/.*: //' -e 's/"//g' -e 's/,$//' 
 done
