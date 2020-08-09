@@ -1,0 +1,71 @@
+\documentclass[11pt,a4]{article}
+\usepackage[english]{babel}
+\usepackage{pgf-umlsd}
+\usepackage{listings}
+% \usepackage{\ttfamily}
+\lstset{
+  % basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+
+\def\date{\today\xspace}
+\def\version{1.31\xspace}
+\def\title{Technical Debt Primer\xspace}
+\def\subject{Webweaving Primer on Technical Debt\xspace}
+\def\opensource{no} % yes or no (lowercase)
+\def\hidepeople{no} % yes or no (lowercase)
+\def\status{} 
+\def\validityOffer{0}
+
+\input{../../colateral/prospectus-template}
+     
+\addtolength{\oddsidemargin}{0.5cm}
+\addtolength{\evensidemargin}{0cm}
+\setlength{\headsep}{1.8cm}
+
+\begin{document}
+\preamble
+
+\newcommand{\chapter}{\section}
+
+\section*{Exporting Public key from HSM as X9.62}
+
+Apple and Google require a X9.62 style key for GAEN. The \textsc{him} its current \textsc{pkcs\#11} implementation does not seem to support \textsc{ecdsa} keys\footnote{The various export operations yields a truncated key. Cause unclear}. export. The proprietary { \texttt{cxitool}} outputs the public key as a 65 byte hex blob.
+
+With that blob an \textsc{asn1} X9.62 can be constructed by taking the \textsc{asn1} of the algorithm identifier (id-ecPublicKey0  and parameter (secp256r1) and postfixing this by the public key (as the length is known already).
+
+\begin{lstlisting}[language=bash,]
+
+cxitool Dev=<hsmport>}@<hsmhost> \
+	LogonPass=USR_<userid>,<pin> \
+	Group=SLOT_<slotid> Spec=<specid> \
+	ExportPubKeyFile=/tmp/ec.$$
+	
+(
+	  echo -----BEGIN PUBLIC KEY----- 
+	(
+		#construct prefix
+		openssl ecparam -name secp256r1 -genkey -noout | \
+			openssl ec -pubout  | tail +2 | head -2 |\
+			base64 -d  | xxd -p -l 26
+		# extract key 
+		PUB=`tail -1 /tmp/ec.$$ | sed -e 's/.*PUB=//'`
+	) | xxd -r -p | base64
+	echo -----END PUBLIC KEY----- 
+) | openssl ec -pubin > /etc/keys/ecdsa.pem
+openssl ec -text -pubin < /etc/keys/ecdsa.pem
+
+# This rm is fairly crucial - as cxitool will silently fail on the next
+# run (but still having changed the key - so they are now out of sync).
+rm -f /tmp/ec.$$
+
+\end{lstlisting}
+
+
+
+\closingpage
+
+\end{document}
+
