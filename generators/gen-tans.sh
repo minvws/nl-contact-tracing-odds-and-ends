@@ -6,17 +6,15 @@ URL=${ODDS_ENDS_ENDPOINT_API:-https://test.coronamelder-api.nl/v1}
 
 set -e
 if [ $# -gt 1 ]; then
-	echo "Syntax: $0 [payload]"
+  # heh.. this never appears. Todo: add this behind -h
+	echo "Syntax: $0"
+  echo "\n"
+  echo "By default, uses test API. If you want to test against a different (e.g. local dev) env, set ODDS_ENDS_ENDPOINT_API to for example http://localhost"
 	exit 1
 fi
 
 for j in 1 2 3 4 5 6 7 8 9 10
 do
-
-PAYLOAD='{"keys":[{"keyData":"EaMR2wpMuSMMw3wSy32HEQ==","rollingStartNumber":RT,"rollingPeriod":72}],"bucketId":"BUCK","padding":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="}' 
-if [ $# -eq 1 ]; then
-	PAYLOAD=`cat "$1"`
-fi
  
 echo '{"padding":"Yg=="}' |\
 curl  -X POST \
