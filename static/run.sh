@@ -1,7 +1,12 @@
 #!/bin/bash
 
 testscripts_path="../test-tools"
-testscripts="patch-static-html-testscript.sh"
+
+testscripts=" \
+patch-static-html-testscript-environment.sh \
+patch-static-html-testscript-register-post-teks.sh
+"
+
 outdir=$(mktemp -d -t run-XXXXXXX)
 static_out="static_out"
 RET=1
@@ -25,9 +30,11 @@ done
 
 echo "INFO: phase 2 = collect output"
 
-if test -f ${outdir}/${testscript}.out; then
-    cp ${outdir}/${testscript}.out templates/${testscript}.html
-fi
+for testscript in ${testscripts}; do
+    if test -f ${outdir}/${testscript}.out; then
+        cp ${outdir}/${testscript}.out templates/${testscript}.html
+    fi
+done
 
 echo "INFO: phase 3 = generate static html"
 python serve.py &
