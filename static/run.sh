@@ -1,68 +1,50 @@
 #!/bin/bash
 
-testscripts_path="../test-tools"
+scripts_path="../test-tools"
 
-testscripts=" \
+scripts=" \
 patch-static-html-testscript-environment.sh \
 patch-static-html-testscript-register-post-teks.sh
 "
 
 outdir=$(mktemp -d -t run-XXXXXXX)
-static_out="static_out"
+static_out="build"
 RET=1
 
 echo "INFO: generating static html"
 
 echo "INFO: phase 1 = run test script(s)"
 
-for testscript in ${testscripts}; do
-    echo "      script: ${testscript}"
-    ${testscripts_path}/${testscript} > ${outdir}/${testscript}.out
+for script in ${scripts}; do
+    ${scripts_path}/${script} > ${outdir}/${script}.out
     status=$?
     if test $status -eq 0; then
-        echo "      INFO: script: ${testscript} ok"
-        echo "      INFO: output in ${outdir}/${testscript}.out"
+        echo "      INFO: script: ${script} ok"
+        #echo "      INFO: output in ${outdir}/${testscript}.out"
     else
-        echo "      ERR : script: ${testscript} not ok"
+        echo "      ERR : script: ${script} not ok"
     fi
 
 done
 
 echo "INFO: phase 2 = collect output"
 
-for testscript in ${testscripts}; do
-    if test -f ${outdir}/${testscript}.out; then
-        cp ${outdir}/${testscript}.out templates/${testscript}.html
+for script in ${scripts}; do
+    if test -f ${outdir}/${script}.out; then
+        cp ${outdir}/${script}.out templates/${script}.html
     fi
 done
 
 echo "INFO: phase 3 = generate static html"
-python serve.py &
-PYTHON_PID=$!
-
-sleep 5
-
-if test -f $static_out/index.html; then
-    rm -f $static_out/index.html
-fi
-curl --silent http://127.0.0.1:5000/ -o $static_out/index.html
-
+python serve.py build
 status=$?
 if test $status -eq 0; then
     if test -f $static_out/index.html; then
-        echo "INFO: static html ok"
+        echo "INFO: python build ok"
     fi
 else
-    echo "ERR : kill python process ($PYTHON_PID) not ok"
-fi
-
-kill $PYTHON_PID
-status=$?
-if test $status -eq 0; then
-    echo "INFO: kill python process ($PYTHON_PID) ok"
     RET=0
-else
-    echo "ERR : kill python process ($PYTHON_PID) not ok"
+    echo "ERR : python build not ok"
 fi
 
 exit $RET

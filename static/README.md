@@ -43,12 +43,9 @@ INFO: generating static html
 INFO: phase 1 = run test script(s)
 INFO: phase 2 = collect output
 INFO: phase 3 = generate static html
-127.0.0.1 - - [10/Aug/2020 05:42:11] "GET / HTTP/1.1" 200 -
-INFO: static html ok
-INFO: kill python process (309617) ok
 ```
 
-The resulting local html file (minus the required 'css/' and 'img/' directories) will be placed in the 'static_out/' directory. 
+The resulting local html file will be placed in the 'build' directory.
 This can be used to place on a public webserver. Also, you can optionally pick this up from the CI workflow (artifact).
 
 

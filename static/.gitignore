@@ -21,4 +21,4 @@ venv/
 ENV/
 
 templates/*.sh.html
-static_out/index.html
+build
