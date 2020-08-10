@@ -16,15 +16,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
         if [ -f static/requirements.txt ]; then pip install -r static/requirements.txt; fi
     - name: Run static file generation 
       run: |
         cd static
         bash run.sh
-    - name: Upload html artifact
+    - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
-        name: index.html
-        path: static/build/index.html
+        name: build
+        path: static/build/
 
