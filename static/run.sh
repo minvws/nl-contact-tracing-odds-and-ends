@@ -4,6 +4,7 @@ testscripts_path="../test-tools"
 testscripts="patch-static-html-testscript.sh"
 outdir=$(mktemp -d -t run-XXXXXXX)
 static_out="static_out"
+RET=1
 
 echo "INFO: generating static html"
 
@@ -42,20 +43,19 @@ curl --silent http://127.0.0.1:5000/ -o $static_out/index.html
 status=$?
 if test $status -eq 0; then
     if test -f $static_out/index.html; then
-        echo "      INFO: static html ok"
+        echo "INFO: static html ok"
     fi
 else
-    echo "      ERR : kill python process ($PYTHON_PID) not ok"
+    echo "ERR : kill python process ($PYTHON_PID) not ok"
 fi
 
 kill $PYTHON_PID
 status=$?
 if test $status -eq 0; then
-    echo "      INFO: kill python process ($PYTHON_PID) ok"
+    echo "INFO: kill python process ($PYTHON_PID) ok"
+    RET=0
 else
-    echo "      ERR : kill python process ($PYTHON_PID) not ok"
+    echo "ERR : kill python process ($PYTHON_PID) not ok"
 fi
 
-
-
-exit 0
+exit $RET
