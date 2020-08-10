@@ -42,8 +42,8 @@ if test $status -eq 0; then
     if test -f $static_out/index.html; then
         echo "INFO: python build ok"
     fi
-else
     RET=0
+else
     echo "ERR : python build not ok"
 fi
 
