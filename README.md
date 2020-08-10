@@ -46,5 +46,5 @@ gen-unmanaged-gaen.sh
 
 ## Static html
 The output of scripts can be converted to (a) static html (page).
-See [static/README.md)](static/README.md) for details.
+See [static/README.md](static/README.md) for details.
 
