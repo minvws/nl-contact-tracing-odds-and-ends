@@ -22,3 +22,6 @@ ENV/
 
 templates/*.sh.html
 build
+templates/keysets
+
+datastore/*.json
