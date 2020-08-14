@@ -36,10 +36,6 @@ def read_json(path):
 if environment:
     datastore = Config.DATA_STORE
     headers = Config.REQUEST_HEADERS
-    #headers = {
-    #    'Content-Type': 'application/json',
-    #    'User-Agent': 'joosts-check/2.00',
-    #}
     sig = ''
 
     t_dir = tempfile.mkdtemp(dir='/var/tmp')
@@ -148,7 +144,7 @@ if environment:
         datastore_filename = "%s.json" % exposurekeyset
         datastore_file = os.path.join(datastore, datastore_filename)
         print("INFO: writing to datastore '{}'.. ".format(datastore_filename), end='')
-        write_json(datastore_file, environment_json)
+        write_json(datastore_file, exposure_key_json)
         print("OK")
 
 

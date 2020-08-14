@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>title</title>
-    <link rel="stylesheet" href="/static/css/nl-design-system/uno/core/uno.css">
-    <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nl-design-system/uno/core/uno.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body>
 <header class="header" role="banner">
@@ -20,10 +19,7 @@
   <div class="container">
     <ul class="nav">
       <li class="nav__item">
-        <a href="/" class="nav__link">Home</a>
-      </li>
-      <li class="nav__item">
-        <a href="/verify" class="nav__link">Verify</a>
+        <a href="/index.html" class="nav__link">Home</a>
       </li>
     </ul>
   </div>
@@ -36,10 +32,10 @@
           <div class="content">
             <section class="content__header">
               <h1 class="content__header-title">
-                    Titel
+                  {{ app_data.title }} 
               </h1>
               <p class="content__header-paragraph">
-                       dinges dinges lorum ipsum
+                  {{ app_data.description }} 
               </p>
             </section>
           </div>

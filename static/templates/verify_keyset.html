@@ -1,0 +1,68 @@
+{% include 'header.html' %}
+
+{% block content %}
+<div id="/blocks/verify-environments" class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <div class="content-background">
+      <div class=" row ">
+          <div class="content">
+            <header class="content__header">
+                <h2 class="content__header-title">Verify Keyset </h2>
+                <p class="content__header-paragraph">keyset: {{keyset}} </p>
+            </header>
+
+            <h3> Exposure keyset</h3>
+            <table class='table'>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>batchNum</td>
+                    <td>{{ data.batchNum }}</td>
+                </tr>
+                <tr>
+                    <td>batchCount</td>
+                    <td>{{ data.batchCount }}</td>
+                </tr>
+                <tr>
+                    <td>timeWindowStart:</td>
+                    <td>{{ data.timeWindowStart }}</td>
+                </tr>
+                <tr>
+                    <td>timeWindowEnd:</td>
+                    <td>{{ data.timeWindowEnd }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h3> Signature info</h3></td>
+                </tr>
+               {% for k,v in data.signatureInfos.items() %}
+                 <tr>
+                     <td>{{ k }}:</td>
+                     <td>{{ v }}</td>
+                 </tr>
+             {% endfor %}
+                <tr>
+                    <td colspan="2"><h3> TEKs</h3></td>
+                </tr>
+
+             {% for i in data.diagnosisKeys %}
+               <tr>
+               {% for k,v in i.items() %}
+                 {% if k == 'TemporaryExposureKey' %}
+                 <td><a href="/keyset/{{keyset}}/tek/{{v}}/index.html">{{ v }}</a></td>
+                 {% endif %}
+                 <td></td>
+               {% endfor %}
+               </tr>
+             {% endfor %}
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</main>
+{% endblock %}
+{% include 'footer.html' %}
