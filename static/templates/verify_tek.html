@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+
+{% block content %}
+<div id="/blocks/verify-environments" class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <div class="content-background">
+      <div class=" row ">
+          <div class="content">
+            <header class="content__header">
+                <h2 class="content__header-title">Verify Keyset </h2>
+                <p class="content__header-paragraph">keyset: {{keyset}} </p>
+                <p class="content__header-paragraph">TEK: {{tek}} </p>
+            </header>
+
+            <h3> TEK</h3>
+            <table class='table'>
+             {% for i in data.diagnosisKeys %}
+               {% for k,v in i.items() %}
+                 {% if v == tek %}
+                 <tr>
+                   <tr><td>{{ k }}:</td><td> {{ v }}</td></tr>
+                   <tr><td>transmission risk level:</td><td> {{ i.transmissionRiskLevel }}</td></tr>
+                   <tr>
+                       <td>validity:</td>
+                       <td> 
+                           {% for kk,vv in i.validity.items() %}
+                             <table class='table'>
+                                 <tr><td>{{kk}}:</td><td>{{vv}}</td></tr>
+                             </table>
+                           {% endfor %}
+                       </td>
+                   </tr>
+                 </tr>
+                 {% endif %}
+               {% endfor %}
+             {% endfor %}
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</main>
+{% endblock %}
+{% include 'footer.html' %}

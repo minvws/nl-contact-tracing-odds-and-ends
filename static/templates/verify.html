@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+{% block content %}
+<div id="/blocks/verify-environments" class="row">
+  <div class="col-md-offset-1 col-md-10">
+    <div class="content-background">
+      <div class=" row ">
+          <div class="content">
+            <header class="content__header">
+                <h2 class="content__header-title">Verify {{ omgeving }} omgeving</h2>
+                <p class="content__header-paragraph">lorum ipsum {{ title }}</p>
+            </header>
+
+            <table class='table'>
+                <tr>
+                    <td>appConfig:</td>
+                    <td>{{ data.appConfig }}</td>
+                </tr>
+                <tr>
+                    <td>riskCalculationParameters:</td>
+                    <td>{{ data.riskCalculationParameters }}</td>
+                </tr>
+                <tr>
+                    <td>manifest_pki_signature:</td>
+                    <td>{{ data.manifest_pki_signature }}</td>
+                </tr>
+                <tr>
+                    <td>aantal keysets:</td>
+                    <td> {{ data.no_keysets }} </td>
+                </tr>
+                <tr>
+                    <td> Laatst bijgewerkt:</td>
+                    <td> {{ data.retrievaltimestamp }} </td>
+                </tr>
+            </table>
+            <h3> Exposure keysets </h3>
+            <table class='table'>
+             {% for i in data.exposureKeySets %}
+                <tr>
+                    <td><a href="/keyset/{{i}}/index.html">{{ i }}</a></td>
+                </tr>
+            {% endfor %}
+            </table>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</main>
+{% endblock %}
+{% include 'footer.html' %}

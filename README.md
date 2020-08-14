@@ -43,3 +43,8 @@ gen-unmanaged-gaen-as-cert.sh
 
 gen-unmanaged-gaen.sh
 	simply generate a plain GAEN umanged key without ado.
+
+## Static html
+The output of scripts can be converted to (a) static html (page).
+See [static/README.md](static/README.md) for details.
+

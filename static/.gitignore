@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# pyenv
+.python-version
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+templates/*.sh.html
+build
+templates/keysets
+
+datastore/*.json
