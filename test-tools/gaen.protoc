@@ -12,8 +12,8 @@ message TemporaryExposureKeyExport {
 }
 
 message SignatureInfo {
-  reserved 1, 2;
-  reserved "app_bundle_id", "android_package";
+  optional string app_bundle_id = 1;
+  reserved "android_package";
   optional string verification_key_version = 3;
   optional string verification_key_id = 4;
   optional string signature_algorithm = 5;

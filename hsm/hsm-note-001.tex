@@ -20,7 +20,7 @@
 
 \section*{Exporting Public key from HSM as X9.62}
 
-Apple and Google require a X9.62 style key for GAEN. The \textsc{him} its current \textsc{pkcs\#11} implementation does not seem to support \textsc{ecdsa} keys\footnote{The various export operations yields a truncated key. Cause unclear}. export. The proprietary { \texttt{cxitool}} outputs the public key as a 65 byte hex blob.
+Apple and Google require a X9.62 style key for GAEN. The \textsc{hsm} its current \textsc{pkcs\#11} implementation does not seem to support \textsc{ecdsa} keys\footnote{The various export operations yields a truncated key. Cause unclear}. export. The proprietary { \texttt{cxitool}} outputs the public key as a 65 byte hex blob.
 
 With that blob an \textsc{asn1} X9.62 can be constructed by taking the \textsc{asn1} of the algorithm identifier (id-ecPublicKey0  and parameter (secp256r1) and postfixing this by the public key (as the length is known already).
 

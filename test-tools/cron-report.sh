@@ -13,7 +13,7 @@ then
 fi
 echo "$ENVIRONMENT::dist=$S" >> /tmp/this
 
-echo "</pre>"
+echo "</pre> Details can be found at <a href='/corona/$ENVIRONMENT'>here</a>"
 
 echo "<hr>Register and post of TEKs on $ENVIRONMENT"
 
