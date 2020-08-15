@@ -1,45 +1,29 @@
-Will generally require
+== Backend
 
-	openssl   (the real one, free/libressl is not complete enough)
-	protoc	- protobuff compiler
-	json_pp	- json pretty printer
-	xxd	- hex/bin/ect converter
-	base64	- base64 decoder/encoder
+This repository contains some testing and test tools for the backend that
+were useful during development.
 
-The scripts named 'zsh' need zsh - as they reply on printf/echo having the -n flag (which the bash build-in does not).
+This repository is part of the Dutch Corona effort. The gouvernance, 
+licenses, code of conduct, contacts and processes are described in 
 
-fetch-eks.sh
-	Fetch all the ZIPs with TEKS from the CDN
+   https://github.com/minvws/nl-contact-tracing-app-coordination.
 
-check-manifest-eks-and-verify.zsh
-	Validate all ZIPs with TEKS on the CDN
+The code in this repository is under the EUPL/1.2 license unless 
+otherwise indicated. Certain logos, fonts, marks and other insignia 
+cannot be used without permission of the Staat der Nederlanden. Further
+details can be found at the above URL.
 
-check-signature-gaen.sh
-	check the signature/hmac on a post TEKs
+== Bug reports and contributions.
 
-check-posting.sh
-	post a generated set of keys; will post keys with the date in them.
+For bug reports, feedback, suggestions and contributions are most welcome; 
+see the above URL and then file your issue / pull request at:
 
-post-payloads.sh
-	post one or more key files
+   https://github.com/minvws/nl-contact-tracing-app-odds-and-ends
 
-check-eks.zsh
-	given one or more blob hashes - fetch each and check signature. Also
-	works for blobs that are no longer or not yet in the manifest.
-	
-gen-fake-pki-overheid.sh
-	generate a fake PKI tree that looks a bit like the PKI overheid one
-	for testing
+== Security 
 
-gen-server-cert.sh
-	use above to generate a TLS/SSL cert
+For security reports - see the security tab at:
 
-gen-signing-cert.sh
-	use above for generating a signing key
+   https://github.com/minvws/nl-contact-tracing-app-odds-and-ends
+ 
 
-gen-unmanaged-gaen-as-cert.sh
-	generate a GAEN unmanaged key - in a cert format useful for HSMs and
-	windows truststores
-
-gen-unmanaged-gaen.sh
-	simply generate a plain GAEN umanged key without ado.
