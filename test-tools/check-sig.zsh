@@ -3,8 +3,8 @@
 TMPDIR=${TMPDIR:-/tmp}
 set -e
 
-if [ $# -ne 2 ]; then
-	echo "$0 <export.bin> <export.sig>"
+if [ $# -lt 2 ]; then
+	echo "$0 <export.bin> <export.sig> [ecdsa-pubkey.pem]"
 	exit 1
 fi
 
@@ -12,15 +12,20 @@ mkdir -p $TMPDIR/get.$$
 cp $1 $TMPDIR/get.$$
 cp $2 $TMPDIR/get.$$
 
-cd $TMPDIR/get.$$
-
-{
-cat <<EOM > pub-key.pem
+if [ $# = 3 ]; then
+	cp "$3" $TMPDIR/get.$$/pub-key.pem
+else
+	cat <<EOM > $TMPDIR/get.$$/pub-key.pem
 -----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBlg7P7K1cP6vrQ1rIfKnCjsPKGb3
 IwLs55lIMIk7TydGzKUDn7+yw6UjFZIJxlD/hmjofZ1mmIykOLcir1meKg==
 -----END PUBLIC KEY-----
 EOM
+fi
+
+cd $TMPDIR/get.$$
+
+{
 
 # Reconstruct the protobuff definition; source: https://github.com/google/exposure-notifications-server/blob/1208580e92e3a9f23d85eb570fbdff8d1f6e7a00/internal/pb/export/export.proto
 #
