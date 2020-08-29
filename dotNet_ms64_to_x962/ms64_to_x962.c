@@ -1,6 +1,4 @@
 /* Copyright 2020 De Staat der Nederlanden, Ministerie van Volksgezondheid, Welzijn en Sport.
- * Licensed under the EUROPEAN UNION PUBLIC LICENCE v. 1.2
- * SPDX-License-Identifier: EUPL-1.2
  * dirkx@apache.org
  */
 
@@ -52,11 +50,11 @@ int ms64byte_to_x962(const unsigned char ms64[64], unsigned char ** out)
 	r = BN_bin2bn(ms64,32, NULL);
 	s = BN_bin2bn(ms64+32,32, NULL);
 	if (NULL == r || NULL == s)
-		return -1;
+                goto free_and_exit;
 
         x962  = X962_new();
 	if (NULL == x962)
-		return -1;
+                goto free_and_exit;
 
         if (NULL == BN_to_ASN1_INTEGER(r, x962->r))
                 goto free_and_exit;
