@@ -11,8 +11,8 @@ test-dump: ms64_to_x962.o test.o
 	$(CC) $(CFLAGS)  $^ -o $@ $(LIBS) $(LDFLAGS)
 
 test: test-dump
-	./$(EXEC) | openssl asn1parse -i -inform DER
-	./$(EXEC) | openssl asn1parse -i -inform DER | diff -qw result.txt - && echo OK
+	./test-dump | openssl asn1parse -i -inform DER
+	./test-dump | openssl asn1parse -i -inform DER | diff -qw result.txt - && echo OK - prefix-zap works.
 
 dmalloc: test-dump
 	$(CC) $(CFLAGS) -DDMALLOC -DDMALLOC_FUNC_CHECK  $^ -o test-dmalloc $(LIBS) $(LDFLAGS) -ldmalloc

@@ -58,16 +58,13 @@ int ms64byte_to_x962(const unsigned char ms64[64], unsigned char ** out)
 	if (NULL == x962)
 		return -1;
 
-	ASN1_INTEGER_free(x962->r);
-	x962->r = BN_to_ASN1_INTEGER(r, NULL);
+        if (NULL == BN_to_ASN1_INTEGER(r, x962->r))
+                goto free_and_exit;
 
-	ASN1_INTEGER_free(x962->s);
-	x962->s = BN_to_ASN1_INTEGER(s, NULL);
+        if (NULL == BN_to_ASN1_INTEGER(s, x962->s))
+                goto free_and_exit;
 
- 	if (NULL == x962->r || NULL == x962->s)
-		goto free_and_exit;
-
-	if (-1 ==(len = i2d_X962(x962, NULL)))
+	if ((len = i2d_X962(x962, NULL))<0)
 		goto free_and_exit;
 
 	if (NULL == *out && NULL == (*out = (unsigned char *)malloc((size_t)len)))
