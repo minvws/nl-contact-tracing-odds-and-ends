@@ -136,10 +136,22 @@ echo \# 1.  shall not all be ones and
 echo \# 2.  shall not all be zero.
 # P
 echo FF F0 00 00 00 00 00 00   00 00 00 00 00 00 00 00 
-echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 80
+echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
 # Q
 echo 03 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00 
 echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00
+) | parse
+
+(
+echo \# ... the bits of the first octet and bit 8 of the second octet:
+echo \# 1.  shall not all be ones and
+echo \# 2.  shall not all be zero.
+# P
+echo FF F0 00 00 00 00 00 00   00 00 00 00 00 00 00 00 
+echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 FF
+# Q
+echo 03 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00 
+echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 FF
 ) | parse
 
 (
