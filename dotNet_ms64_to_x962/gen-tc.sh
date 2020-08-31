@@ -3,10 +3,12 @@ parse() {
 	(
 	cat > /tmp/x
 	cat /tmp/x | sed -e 's|\# *||g' -e 's|^|// |g'
+	cat /tmp/x | sed -e 's|\#.*||g' | xxd -p -r  > /tmp/xn
+	# cat /tmp/xn | hexdump -C | sed  -e 's|^|// |g'
 	echo "// Expected output:"
-	cat /tmp/x | xxd -p -r  | ./convert | openssl asn1parse -inform DER | sed -e 's|^|//|'
+	cat /tmp/xn  | ./convert | openssl asn1parse -inform DER | sed -e 's|^|//|'
 	echo '//'
-	echo '[InlineData("'`cat /tmp/x | xxd -p -r |base64`'","'`cat /tmp/x | xxd -p -r  | ./convert | base64`'")]'
+	echo '[InlineData("'`cat /tmp/xn | base64`'","'`cat /tmp/xn | ./convert | base64`'")]'
 	) 2>/dev/null
 }
 
@@ -81,7 +83,7 @@ echo 11 22 33 44 55 66 77 88   11 22 33 44 55 66 77 88
 ) | parse
 
 (
-echo \# strip first to just one byte; but with topbit set.
+echo \# strip first to just one byte, but with topbit set.
 # P
 echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00 
 echo 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 F1
