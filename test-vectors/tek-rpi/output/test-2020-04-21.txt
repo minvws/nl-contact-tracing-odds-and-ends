@@ -1,0 +1,159 @@
+// File: test-2020-04-21.txt
+// Inputs 
+1587427200// time since epoch in seconds
+ e5 97 44 a3 ee a6 77 36 af 33 ce 61 fe 90 5d 54 // TEK
+ 40 08 00 00 // Metadata
+
+
+// Derived intermediate values
+2645712// Interval count
+ e6 b9 50 87 f2 ac b8 cc 67 d3 f1 d2 9f d5 c8 b0 // RPIK
+ 60 5f 2f 65 0a a7 b8 8b 64 b7 e9 41 d7 dc 21 e4 // AEMK
+
+
+// Broadcasted values, from mid night on
+// RMI_ij                                        AEM_j
+ ca e4 8d 5e 55 92 47 68 9f b6 50 33 7b 9b c1 fc  86 17 e4 5f // Bcast from Tue Apr 21 00:00:00 2020
+ 6c d2 cc 86 b2 ce 68 5c 3c 61 9d 1f ff 1b ae 42  47 74 80 32 // Bcast from Tue Apr 21 00:10:00 2020
+ f2 62 a9 36 97 9e c1 7d e9 6f 3a 7a ab 99 75 51  97 a7 38 65 // Bcast from Tue Apr 21 00:20:00 2020
+ e1 35 e6 2b c8 eb 7b 7e 76 e3 35 85 e2 ad 39 91  af 55 ed 87 // Bcast from Tue Apr 21 00:30:00 2020
+ 8c 9f b2 99 91 b2 16 85 26 3f 66 56 a3 80 00 3b  72 6f f3 94 // Bcast from Tue Apr 21 00:40:00 2020
+ 49 ba 82 f8 c0 ba ef 9d f2 93 44 fd 2d 25 43 9a  07 ff b8 19 // Bcast from Tue Apr 21 00:50:00 2020
+ f8 13 0a de 6c 42 dd 6d bb c9 c3 95 2a 16 2e 78  45 7a fb 74 // Bcast from Tue Apr 21 01:00:00 2020
+ b0 46 ae 7c 79 74 40 ec c9 99 86 b3 10 aa 4d 65  ec 26 8f b7 // Bcast from Tue Apr 21 01:10:00 2020
+ cc 7b 57 38 c9 58 fe 12 1b b6 07 85 e8 1b 35 16  19 51 31 c7 // Bcast from Tue Apr 21 01:20:00 2020
+ 45 fd 3e 5e ed 1d af 8d 09 4f 1e 58 d8 be 8c 7b  64 c7 1d 0d // Bcast from Tue Apr 21 01:30:00 2020
+ 83 8a 9b d1 c2 f1 18 a4 65 56 7a 5d f2 71 2a c5  5c b9 d2 48 // Bcast from Tue Apr 21 01:40:00 2020
+ d9 e8 c5 f5 81 26 ec 6e 20 b9 35 1f b9 7f c1 23  e2 a7 02 c5 // Bcast from Tue Apr 21 01:50:00 2020
+ 7d f2 94 91 f4 a2 5e 9b c7 06 ef 14 2e b5 35 14  be e9 9a 4c // Bcast from Tue Apr 21 02:00:00 2020
+ 2a 40 72 08 d3 59 c4 a8 de 38 ca f9 9c ba ae 4a  3e a4 46 d9 // Bcast from Tue Apr 21 02:10:00 2020
+ fd de a6 3e 17 5f 7a 55 c8 03 6b 82 f3 c2 83 d4  81 9b 4a ec // Bcast from Tue Apr 21 02:20:00 2020
+ 76 86 73 9a c3 00 cf c1 9e 37 63 40 d8 fd 02 0d  36 a3 19 a1 // Bcast from Tue Apr 21 02:30:00 2020
+ 26 2e f5 fc ce 94 e8 e7 84 c5 44 84 c0 10 9b b1  99 41 c8 46 // Bcast from Tue Apr 21 02:40:00 2020
+ 5c 44 ec fe c7 d5 dd 4f 0b 95 09 ad c8 9b d5 c9  8c 29 9b 3f // Bcast from Tue Apr 21 02:50:00 2020
+ 40 24 be 9b 5d bd 20 29 e3 2d 5d 18 1a 9f 53 82  41 da a4 ad // Bcast from Tue Apr 21 03:00:00 2020
+ 11 32 8d 85 7c 12 f9 37 39 63 74 0d 2e 44 81 a8  fd 60 59 7d // Bcast from Tue Apr 21 03:10:00 2020
+ b8 9b b3 1d 09 31 2b c2 c9 c5 6b 20 51 6d 2d 42  ce d0 30 3b // Bcast from Tue Apr 21 03:20:00 2020
+ 9c b0 a2 1a 91 07 98 ee 32 cd 74 d8 0b 6d 23 62  b5 e5 1a 93 // Bcast from Tue Apr 21 03:30:00 2020
+ 4d 4f 31 70 66 1f 5a ac c1 6b 2e e1 70 5f 42 e8  e7 39 64 cd // Bcast from Tue Apr 21 03:40:00 2020
+ de d1 2c 67 af b4 c3 c0 5e fe d3 ae 95 a0 0f 5a  08 54 2d 61 // Bcast from Tue Apr 21 03:50:00 2020
+ 54 80 2d e1 62 dc 26 c2 41 84 00 47 5d 75 40 70  25 db 9e 66 // Bcast from Tue Apr 21 04:00:00 2020
+ b1 e2 ad cd 36 90 44 6d 1b 2e e9 15 5f c9 10 c1  4b b7 96 58 // Bcast from Tue Apr 21 04:10:00 2020
+ 43 2f c5 a0 10 a1 ed 71 4c e9 60 e6 7a b9 f1 bc  40 eb a2 cc // Bcast from Tue Apr 21 04:20:00 2020
+ 46 0f 2c f7 b6 52 a3 ae b5 b1 00 57 a9 11 de fd  61 2a 39 f0 // Bcast from Tue Apr 21 04:30:00 2020
+ 46 14 a5 93 40 9b 63 b6 3f f3 97 39 40 83 b2 26  77 f6 d9 65 // Bcast from Tue Apr 21 04:40:00 2020
+ 84 9e fe dc 45 e5 f7 87 cb 38 60 35 01 21 02 96  f8 8c 6c e8 // Bcast from Tue Apr 21 04:50:00 2020
+ fe 74 29 03 82 0c 68 9a 22 b6 d6 f5 3a 02 3c 06  9e b4 7a f5 // Bcast from Tue Apr 21 05:00:00 2020
+ f6 ce b4 69 dd 0d 8e 61 bf c4 d5 1c 0f e2 95 1c  19 5a 38 91 // Bcast from Tue Apr 21 05:10:00 2020
+ 89 8a 2f 42 fa 26 4c 8f c7 b8 20 85 5e 8e 8e 99  94 b2 9a 6d // Bcast from Tue Apr 21 05:20:00 2020
+ f5 31 e1 aa f6 49 ed 7a f5 25 46 7f 56 1f b3 93  df d4 6e f5 // Bcast from Tue Apr 21 05:30:00 2020
+ 46 20 f6 2f 1a b2 33 d8 72 cf 0f b0 2c 10 04 61  b7 88 31 f9 // Bcast from Tue Apr 21 05:40:00 2020
+ b1 df 4e d3 42 18 f2 57 f2 a1 9c 2a 2b 94 aa d8  54 7b 75 b2 // Bcast from Tue Apr 21 05:50:00 2020
+ 8c 5d 18 9d 52 9b 61 b7 a1 7e 45 ad 24 84 7d 54  f8 1a ec 7e // Bcast from Tue Apr 21 06:00:00 2020
+ dd 12 e6 fc aa 00 ab 91 a4 76 d4 d2 7a 8c 40 ac  cd 4a ff 5b // Bcast from Tue Apr 21 06:10:00 2020
+ ef be cb b3 6d e3 7c 23 7e 5f af 1f 9d cf b6 59  97 9a 2d 96 // Bcast from Tue Apr 21 06:20:00 2020
+ d4 f7 d6 bb e9 68 8d 95 d5 21 aa 98 62 21 b5 2d  9d 36 99 14 // Bcast from Tue Apr 21 06:30:00 2020
+ 2b d2 5f 34 af 71 a4 28 a4 69 44 6a 68 0a 67 8d  de f7 6e 06 // Bcast from Tue Apr 21 06:40:00 2020
+ ea 3b a4 d0 ea cf 47 5d aa 78 3d bb d3 2a 7c 0e  ee fc 70 20 // Bcast from Tue Apr 21 06:50:00 2020
+ 30 17 f0 77 0e 89 00 11 f1 96 12 6a 75 8c 8a 1f  65 e0 ad 05 // Bcast from Tue Apr 21 07:00:00 2020
+ a8 17 69 72 e1 a2 ff 3e 73 2f f2 53 70 6b 91 fc  c2 29 02 57 // Bcast from Tue Apr 21 07:10:00 2020
+ e7 4b ba 65 8a a1 9f 01 ac 49 14 b0 5f 27 cd 6f  d8 e2 56 d1 // Bcast from Tue Apr 21 07:20:00 2020
+ 8b 63 79 98 40 3c da 29 40 10 e2 19 9d 5d de 9c  9e b0 da 6c // Bcast from Tue Apr 21 07:30:00 2020
+ f2 7d f9 7e 09 a6 c8 68 d9 c3 0a 63 a9 2f c1 ee  76 98 65 bb // Bcast from Tue Apr 21 07:40:00 2020
+ a2 b1 8d 54 27 bf 34 9b fc cf 0c 68 51 12 2a 2c  c9 72 d6 a9 // Bcast from Tue Apr 21 07:50:00 2020
+ c3 28 e8 e5 3e a4 10 8a 76 26 95 36 3a 54 63 8c  db 70 fd 19 // Bcast from Tue Apr 21 08:00:00 2020
+ 66 d6 9e 39 bf 27 80 e6 b3 35 71 0e a1 0a ad 6e  8f 93 4a 86 // Bcast from Tue Apr 21 08:10:00 2020
+ 6f 53 57 f5 ac 16 0e ea 76 99 c3 e5 81 55 1b 5d  34 dc 56 a7 // Bcast from Tue Apr 21 08:20:00 2020
+ 12 d1 cb 32 7b 65 55 fa a6 8e 65 a5 92 33 38 ec  5e 90 2d d0 // Bcast from Tue Apr 21 08:30:00 2020
+ 27 f5 b4 5f 56 49 ee d8 39 df 15 0a e8 f2 df 4c  ec 22 7f 82 // Bcast from Tue Apr 21 08:40:00 2020
+ 46 09 d3 65 2d 8e ed 61 9d 18 2f 2c 33 3b b2 eb  b1 ef 1f 45 // Bcast from Tue Apr 21 08:50:00 2020
+ b1 8b 56 a3 ee b6 c8 ae 77 fe c9 ab 8a 29 55 03  47 16 40 41 // Bcast from Tue Apr 21 09:00:00 2020
+ 66 d8 92 64 e8 6d e1 8e b0 8a 1e be c0 2c 4e 23  a4 b6 6f 9f // Bcast from Tue Apr 21 09:10:00 2020
+ 30 bc 47 16 09 8c 45 8e 43 9b 4c 8c 3c 63 e0 53  99 46 bb d1 // Bcast from Tue Apr 21 09:20:00 2020
+ ff dc f9 2e c9 fa 87 2c 44 05 dc 5f ce 5b 50 4f  3b 63 89 f0 // Bcast from Tue Apr 21 09:30:00 2020
+ cb dc 6f 38 d9 c2 68 dd b8 43 07 9b b9 8e dc ad  52 05 13 19 // Bcast from Tue Apr 21 09:40:00 2020
+ 57 a1 a3 5e 27 4c 62 10 b4 4c 9b aa 33 4d 22 b8  ed 3a 05 c1 // Bcast from Tue Apr 21 09:50:00 2020
+ 87 36 87 b3 81 d4 86 95 f2 f2 3f fd df 35 61 aa  98 27 75 d1 // Bcast from Tue Apr 21 10:00:00 2020
+ 58 c7 82 30 ed e2 1e 1c 4b d8 25 ef d6 80 1f aa  cb f7 42 72 // Bcast from Tue Apr 21 10:10:00 2020
+ e6 ae 7e 68 44 4a 0d 0d 58 f6 fd 9c 7f 64 a1 e1  a3 20 cc d4 // Bcast from Tue Apr 21 10:20:00 2020
+ a7 8c c8 d1 e7 cc e8 3e d5 f7 d9 03 27 e4 f1 0f  dd 7e 55 e0 // Bcast from Tue Apr 21 10:30:00 2020
+ 4c 2d a5 e1 24 5a 6d 0c 7f 8e f5 75 fe f0 24 f7  6f 4a 4b 74 // Bcast from Tue Apr 21 10:40:00 2020
+ 5b e6 9a 63 f0 88 93 53 22 f0 d7 d4 33 24 e6 03  78 ec 33 ef // Bcast from Tue Apr 21 10:50:00 2020
+ f7 eb 43 12 5d 0e 45 3b af 49 8a 3d b2 be 62 3d  87 c0 04 c1 // Bcast from Tue Apr 21 11:00:00 2020
+ 05 39 17 f8 9d b7 56 01 b1 30 a1 59 42 df 70 57  8e 5e c4 b3 // Bcast from Tue Apr 21 11:10:00 2020
+ 7c 60 57 0b 2b 3d 01 37 55 59 2e 54 96 44 01 23  e2 2d b9 0a // Bcast from Tue Apr 21 11:20:00 2020
+ 07 e1 09 23 fa 8d ee c7 f5 84 60 27 c1 f1 63 f7  78 ce 1e de // Bcast from Tue Apr 21 11:30:00 2020
+ 49 52 b1 d9 b7 b3 65 de 65 0e a9 65 6c e0 4f 71  fb e8 6c 94 // Bcast from Tue Apr 21 11:40:00 2020
+ ed 12 20 e5 98 c5 64 68 06 f0 6f 52 a6 16 46 6f  66 36 e4 c8 // Bcast from Tue Apr 21 11:50:00 2020
+ 71 0c 67 82 5b 53 89 e8 fc 25 c4 a9 04 9c 74 a7  ff cd a1 5c // Bcast from Tue Apr 21 12:00:00 2020
+ ad 9f dd de 98 11 3d f1 63 23 a3 01 f9 04 10 bc  03 dc 0b 82 // Bcast from Tue Apr 21 12:10:00 2020
+ ce 48 e1 26 4d 44 31 79 8b 10 59 16 6a 4a b6 02  6e 10 06 7f // Bcast from Tue Apr 21 12:20:00 2020
+ fb 20 b5 36 b4 06 6f 00 c8 79 97 85 55 e1 1d 7d  9f 69 b2 90 // Bcast from Tue Apr 21 12:30:00 2020
+ ab 58 ae a8 c7 a0 43 77 e7 cd 1e 8b 67 5e 1d 1e  6e 92 d4 df // Bcast from Tue Apr 21 12:40:00 2020
+ 12 98 b2 0a b6 52 ff 31 70 d7 ab f1 e2 1e e0 4f  14 1a 64 cb // Bcast from Tue Apr 21 12:50:00 2020
+ f2 dd df b8 6c 4f da 1f 85 44 9b 10 c8 9d dc 52  f8 e9 63 52 // Bcast from Tue Apr 21 13:00:00 2020
+ 3f ab 7d ea 32 88 fb 6e 9a f0 9e 20 e2 50 14 88  8a 5b 96 8f // Bcast from Tue Apr 21 13:10:00 2020
+ 0e d3 bf 9d 05 e3 22 3b c6 df 44 da 83 b7 9c f7  7e f8 6d 49 // Bcast from Tue Apr 21 13:20:00 2020
+ c9 ab 45 45 a5 39 48 c2 1f 19 5a 55 12 7e dc cb  a0 61 3e 8f // Bcast from Tue Apr 21 13:30:00 2020
+ e9 38 7b 92 d9 dd e1 85 1c 90 e0 91 e9 58 ab ca  e5 36 05 c3 // Bcast from Tue Apr 21 13:40:00 2020
+ 47 e9 63 3f a0 e7 fc 5c da a1 5c 15 40 b3 0f be  bd 21 e3 c6 // Bcast from Tue Apr 21 13:50:00 2020
+ f3 01 8c 6b ba 51 19 25 d4 2b 20 c5 f2 e0 ce e3  88 97 4d 60 // Bcast from Tue Apr 21 14:00:00 2020
+ 8c 01 bd 56 de df 40 d9 80 ec 9d b8 f5 ea 37 4d  6b 37 91 0b // Bcast from Tue Apr 21 14:10:00 2020
+ d2 68 90 74 71 56 7e b9 b3 21 89 fd e7 58 c1 a7  39 f8 bd 2e // Bcast from Tue Apr 21 14:20:00 2020
+ 78 89 a8 ee 76 8a 5e 19 71 9d 29 c4 86 6d 97 d0  47 5c 82 87 // Bcast from Tue Apr 21 14:30:00 2020
+ 8c de 84 a7 87 0d 52 14 15 8f 51 b0 94 03 fb 1a  9e ab 2d e4 // Bcast from Tue Apr 21 14:40:00 2020
+ 81 e7 e1 c3 0d a8 0a 0c 10 6d 2a e9 f8 b0 d7 1e  a2 00 7f 59 // Bcast from Tue Apr 21 14:50:00 2020
+ e0 b9 5f 70 8d 92 b7 4a 7f 11 5a 4a 17 9b a3 1b  f7 f7 45 5a // Bcast from Tue Apr 21 15:00:00 2020
+ 39 60 d4 13 f8 f5 fd 2a 50 cc b7 2c 3e 76 97 70  63 eb 8f ed // Bcast from Tue Apr 21 15:10:00 2020
+ 29 57 b0 d9 6e 65 96 3f 11 78 61 2e 3c df 73 2b  cd ac a9 c0 // Bcast from Tue Apr 21 15:20:00 2020
+ 0a 23 3b 73 b7 12 a6 ad a3 20 15 9a b2 bf cb 80  8e be 30 c4 // Bcast from Tue Apr 21 15:30:00 2020
+ cd 07 d5 54 fd f4 7a 44 3f e0 8b c4 34 99 cc 7d  81 c9 81 25 // Bcast from Tue Apr 21 15:40:00 2020
+ 68 20 6a aa fe c5 51 ad 04 54 87 4e a0 3a fb 4c  ec 2c 91 7e // Bcast from Tue Apr 21 15:50:00 2020
+ 12 ad e8 d4 71 a5 0a 88 f8 a2 4c 97 3f 4b 79 3a  35 25 25 fa // Bcast from Tue Apr 21 16:00:00 2020
+ 74 b8 32 38 99 b1 af f1 a6 7b 97 40 70 56 da 0d  17 59 48 63 // Bcast from Tue Apr 21 16:10:00 2020
+ 75 fa b1 c2 e1 54 0f 9e 85 ad 8f aa 3e 4b 1c cb  f8 87 c4 a1 // Bcast from Tue Apr 21 16:20:00 2020
+ 41 24 b3 1d 39 ba d5 e8 cb 94 73 5a b1 90 43 cd  03 b8 4f 3f // Bcast from Tue Apr 21 16:30:00 2020
+ 0f 31 ba c8 f9 03 f0 12 0e a1 fb 6b 55 09 89 1f  eb a2 4e ac // Bcast from Tue Apr 21 16:40:00 2020
+ 2f a8 60 b2 56 5b a7 c7 27 99 10 8f 77 63 58 66  45 3a 8d 89 // Bcast from Tue Apr 21 16:50:00 2020
+ f1 9a 5d d2 12 a7 43 66 8e ea cd 36 66 c1 4e a6  c7 89 22 77 // Bcast from Tue Apr 21 17:00:00 2020
+ 95 2f fc bc 51 6c ec 53 dd 6e d4 0b 32 ff 58 6c  0a 52 96 d1 // Bcast from Tue Apr 21 17:10:00 2020
+ 6f 37 a2 5e fa 6f 45 4e 0d 18 ba 45 df db 96 ef  d6 71 8c 36 // Bcast from Tue Apr 21 17:20:00 2020
+ 67 68 24 f3 02 b9 e0 83 89 21 59 f7 a5 d4 d0 97  07 75 1f a4 // Bcast from Tue Apr 21 17:30:00 2020
+ 77 76 d2 d2 64 be 55 ce 29 f9 1e 2a c3 0b b3 f9  29 8e 84 bb // Bcast from Tue Apr 21 17:40:00 2020
+ 45 f7 46 45 10 00 9e 70 7c 89 63 74 fd 02 2e 54  2a 59 0e 68 // Bcast from Tue Apr 21 17:50:00 2020
+ f2 f8 d4 bd d9 b9 d5 c9 70 a4 fe 03 11 b7 10 ef  70 2c 01 77 // Bcast from Tue Apr 21 18:00:00 2020
+ 7e c3 36 a5 c1 08 1d d5 eb 33 1b c6 31 aa 1a ff  f6 43 eb 88 // Bcast from Tue Apr 21 18:10:00 2020
+ 81 44 87 21 72 9d 9f cd 1e 80 57 bb cc eb 10 2a  53 9c 98 23 // Bcast from Tue Apr 21 18:20:00 2020
+ 48 b4 23 f7 a5 f4 0d 5e 54 e1 79 29 c0 db d9 d3  0c 82 e5 12 // Bcast from Tue Apr 21 18:30:00 2020
+ be 82 c6 58 0a 0c b6 be 03 ab c3 2a 19 ab 8b 2e  a4 44 ce ff // Bcast from Tue Apr 21 18:40:00 2020
+ 94 5b 06 b8 8a 0a 62 bb 48 45 0a 00 b3 a5 d1 13  ad 7c 55 ec // Bcast from Tue Apr 21 18:50:00 2020
+ d7 14 75 33 c5 ca 24 4e 8a 92 26 cd a5 d1 b3 80  77 81 66 7b // Bcast from Tue Apr 21 19:00:00 2020
+ 59 73 75 fc 3e 34 64 77 38 c4 6e 50 68 04 96 d4  58 06 fa fd // Bcast from Tue Apr 21 19:10:00 2020
+ cc 79 ed ed 9e f1 b7 05 e2 78 f0 50 f0 0f 06 fd  28 35 f1 d5 // Bcast from Tue Apr 21 19:20:00 2020
+ 23 c2 d0 08 1f 22 f2 ec 51 0c 64 f1 fd 9b 7e 18  c2 20 69 31 // Bcast from Tue Apr 21 19:30:00 2020
+ da f0 f6 48 79 c4 93 8d e9 00 1b 8b 4a 51 89 7a  77 57 55 a5 // Bcast from Tue Apr 21 19:40:00 2020
+ 9b 2b b8 b5 99 86 08 b1 11 3a ce 94 c6 c2 f4 3e  b9 3b 58 74 // Bcast from Tue Apr 21 19:50:00 2020
+ ad da 72 cf f9 c1 56 73 32 c2 ca d8 7f f1 28 93  c9 62 6c 68 // Bcast from Tue Apr 21 20:00:00 2020
+ 7c 6d a7 d2 26 01 7c f0 b3 55 35 df bc 52 1c 94  9d 29 0a 22 // Bcast from Tue Apr 21 20:10:00 2020
+ c9 c0 ef be 34 72 e8 b6 9a ad a2 4b 8a 3b 40 d5  57 37 33 ff // Bcast from Tue Apr 21 20:20:00 2020
+ 42 23 3b ed 05 07 e7 92 45 2a 3a c6 40 33 b6 48  7a 40 c9 d0 // Bcast from Tue Apr 21 20:30:00 2020
+ 0f d0 0a c3 a8 d5 a5 fa 43 82 68 99 b1 dc 7b 80  d6 54 c2 9e // Bcast from Tue Apr 21 20:40:00 2020
+ 6f f9 09 40 00 67 c0 e3 6e f0 e0 e3 49 94 7b 2b  d6 68 a3 d7 // Bcast from Tue Apr 21 20:50:00 2020
+ b8 77 eb 30 c0 cf a8 af ed 2e 35 be 5f a7 d8 0f  36 80 72 8f // Bcast from Tue Apr 21 21:00:00 2020
+ 61 0b c9 22 2d dc 29 5c ed 85 0f 50 fb 9d 27 eb  3c 18 97 a2 // Bcast from Tue Apr 21 21:10:00 2020
+ 78 31 ab 51 5b 0c d3 33 ac 8b a8 55 12 fe 12 9b  e9 f7 80 56 // Bcast from Tue Apr 21 21:20:00 2020
+ 8a b5 8a d7 f9 f7 85 43 47 60 b6 a5 cd e7 28 aa  5a d7 c1 d7 // Bcast from Tue Apr 21 21:30:00 2020
+ a8 76 3d a6 f4 c0 b6 88 da 68 43 75 59 1b 3f 7d  fd d1 ff f5 // Bcast from Tue Apr 21 21:40:00 2020
+ 7b ea cf 75 23 ba de b3 9e 95 81 13 db 94 35 db  0b 9d 62 34 // Bcast from Tue Apr 21 21:50:00 2020
+ 84 c9 d7 26 02 63 ad 0b 75 57 f7 e0 78 ef 24 e0  39 3a 12 a5 // Bcast from Tue Apr 21 22:00:00 2020
+ 3d 48 82 40 65 18 d2 c7 f1 3a 68 e2 65 28 d6 f1  26 d7 43 12 // Bcast from Tue Apr 21 22:10:00 2020
+ ff 9b a6 fb 71 52 1e c1 fe 3c 0b db 37 a0 f1 21  38 9c 4d d4 // Bcast from Tue Apr 21 22:20:00 2020
+ 7e 2b a2 e5 aa 66 7a 23 e9 a9 c9 6b 26 76 cc e0  95 97 02 36 // Bcast from Tue Apr 21 22:30:00 2020
+ dc 9a b4 da 1a f0 5a 84 65 2e 97 60 82 68 fc 51  c4 69 90 f6 // Bcast from Tue Apr 21 22:40:00 2020
+ c4 46 42 34 bc f0 bc 90 8b 1b 12 8a bb 48 eb fb  3e 7a 15 c7 // Bcast from Tue Apr 21 22:50:00 2020
+ 88 7e 65 19 f8 05 58 1e a8 af 79 90 30 dc 74 c5  e8 c4 84 84 // Bcast from Tue Apr 21 23:00:00 2020
+ d6 30 cb ca 5b f8 ed 0c 78 32 a6 a8 1e 41 0a 53  b8 7d 1f 1a // Bcast from Tue Apr 21 23:10:00 2020
+ 82 8d 81 85 35 60 0e 09 d6 e4 55 a3 58 d8 e7 f8  04 3d 40 26 // Bcast from Tue Apr 21 23:20:00 2020
+ ba 22 1e b7 4d 93 32 1d dc 47 7a 5d e8 61 56 37  bc b3 9f 97 // Bcast from Tue Apr 21 23:30:00 2020
+ 85 21 e1 2c 1b 19 88 98 3d 24 5f 59 fc c3 41 42  36 dc ad 78 // Bcast from Tue Apr 21 23:40:00 2020
+ 5c fd 0a 34 29 dc 39 32 02 ac 92 3b d0 c6 79 12  97 53 c0 ce // Bcast from Tue Apr 21 23:50:00 2020

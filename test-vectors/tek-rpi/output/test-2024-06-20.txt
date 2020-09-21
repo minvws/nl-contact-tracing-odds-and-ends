@@ -1,0 +1,159 @@
+// File: test-2024-06-20.txt
+// Inputs 
+1718841600// time since epoch in seconds
+ 6d 70 81 55 f8 4d e9 71 9c 9f 71 46 68 9b da 4d // TEK
+ 40 08 00 00 // Metadata
+
+
+// Derived intermediate values
+2864736// Interval count
+ e0 47 5b 3d 1d c5 f4 a1 d6 98 40 c5 aa 98 7c 08 // RPIK
+ 4a 73 ed a3 be 1c cc ed ac b8 7f cc b4 da 80 8b // AEMK
+
+
+// Broadcasted values, from mid night on
+// RMI_ij                                        AEM_j
+ b0 07 a8 d0 47 5c ba d3 bf 2d 1d d4 37 df e4 ec  fb 58 11 aa // Bcast from Thu Jun 20 00:00:00 2024
+ 66 1f cd c0 56 73 3e 75 27 5b d6 01 19 84 54 7f  ca 98 ab 19 // Bcast from Thu Jun 20 00:10:00 2024
+ b0 ea 8e 26 af 1c 98 19 23 09 84 cc 55 c1 50 fa  c2 c0 74 63 // Bcast from Thu Jun 20 00:20:00 2024
+ 16 82 91 8b 0a 21 cd 7a 45 ce 5d fe 4a 32 42 8a  ad 0e 85 a4 // Bcast from Thu Jun 20 00:30:00 2024
+ b1 d1 9a f9 ba 11 3b 45 95 03 9f cf 44 58 a5 33  e4 6c 91 b4 // Bcast from Thu Jun 20 00:40:00 2024
+ 8e 1e f7 7d ce cd c5 17 55 88 bc ff ac 0e de 11  b6 31 c2 6a // Bcast from Thu Jun 20 00:50:00 2024
+ 0e ad d9 16 ce ec 59 72 f6 2c ed b9 25 84 c4 d7  4e d5 0b 50 // Bcast from Thu Jun 20 01:00:00 2024
+ f0 29 d1 eb b5 58 53 2e d0 ab 26 fc a7 88 8d 07  ac 9c 97 c8 // Bcast from Thu Jun 20 01:10:00 2024
+ 2f 8e dc 83 2f 47 85 57 0e 4d f9 e6 7c 66 1b 61  c3 77 b1 34 // Bcast from Thu Jun 20 01:20:00 2024
+ 5f 54 74 f1 f5 11 61 ad 71 eb e0 a5 08 5c 46 c8  a5 d3 b9 bb // Bcast from Thu Jun 20 01:30:00 2024
+ d9 3b 57 f9 f4 73 82 cf 0c 5c 6e 44 d1 e7 c9 8e  a2 6c 2e 28 // Bcast from Thu Jun 20 01:40:00 2024
+ cf 2a 79 30 0d 76 df 76 4c f1 1a 84 91 67 cb eb  21 4e 5a c8 // Bcast from Thu Jun 20 01:50:00 2024
+ b3 6f 4d ff ef df 5d 57 3c 1f 0b 1d 21 86 0a b4  a0 22 ef 2d // Bcast from Thu Jun 20 02:00:00 2024
+ ea 17 28 a9 cb 22 bf 12 c0 a1 3d 5b 1d 72 e6 37  10 b9 d8 13 // Bcast from Thu Jun 20 02:10:00 2024
+ 3f 54 bf ba 09 4a 82 51 f4 d6 d8 2b 29 5f 57 29  4c 94 d9 32 // Bcast from Thu Jun 20 02:20:00 2024
+ 7b 73 11 8e b0 2e 0b b9 42 e8 e6 f8 2c bd 98 db  c5 5d 46 65 // Bcast from Thu Jun 20 02:30:00 2024
+ 02 85 d5 06 ca 93 2e 23 eb c8 66 f8 6f db 85 5b  5d 6c ad 93 // Bcast from Thu Jun 20 02:40:00 2024
+ 90 31 00 db 36 07 33 29 6a 9b ae fd aa c2 39 4a  04 f3 24 89 // Bcast from Thu Jun 20 02:50:00 2024
+ c2 ca 25 b6 2d 0f 6c bd 43 ae 03 31 ee 2c ba 49  e2 c7 05 25 // Bcast from Thu Jun 20 03:00:00 2024
+ 4a e3 23 95 b9 23 50 3a 6a e3 fb 1a 20 91 d7 ee  ba 5f b2 08 // Bcast from Thu Jun 20 03:10:00 2024
+ 07 b8 c6 b0 62 ba e7 b5 04 99 9d a2 f5 ad ad e1  c6 42 1b 5e // Bcast from Thu Jun 20 03:20:00 2024
+ a0 73 51 ec e6 80 fd b6 2c 5f b5 2b 0e c0 04 7f  9f 9a 2c dc // Bcast from Thu Jun 20 03:30:00 2024
+ 21 d7 97 cf ab a4 39 5f 0e 64 7d 7f dc 74 9e 7b  ab 29 8e f8 // Bcast from Thu Jun 20 03:40:00 2024
+ 7a 07 61 82 23 3c c8 9c 34 a0 81 cf de 5b a2 9c  d8 81 07 4a // Bcast from Thu Jun 20 03:50:00 2024
+ de 3b 22 8e 72 5c 8e d1 f2 77 bf 12 3b 00 09 bf  26 32 c1 8e // Bcast from Thu Jun 20 04:00:00 2024
+ 8f ec fa 4e c2 6a b6 52 e4 6c 70 e1 f9 62 f0 4a  c7 e7 e1 01 // Bcast from Thu Jun 20 04:10:00 2024
+ 4b 82 e1 84 b3 34 03 41 9b b3 24 04 df 29 f8 f6  94 46 fa 17 // Bcast from Thu Jun 20 04:20:00 2024
+ 51 3d 5a 06 e3 a5 33 a6 fa 72 e9 a0 e9 c5 81 2c  8f 51 dd d0 // Bcast from Thu Jun 20 04:30:00 2024
+ 28 33 cf 00 6e 4c 1f 6d d6 16 57 ff bc 52 5a 1a  b1 c8 5e 84 // Bcast from Thu Jun 20 04:40:00 2024
+ d5 0f 62 d1 5e a5 dc dc 77 7b d9 e5 40 1d 45 a3  91 21 b1 c6 // Bcast from Thu Jun 20 04:50:00 2024
+ 8a f0 6e 0d c4 34 4d 56 5e 53 d1 01 fb 30 9f 94  65 94 94 bb // Bcast from Thu Jun 20 05:00:00 2024
+ bc 46 7a 06 a6 12 d3 fb 5c e1 26 5d 9f 53 de 67  6c 2c 25 43 // Bcast from Thu Jun 20 05:10:00 2024
+ ca 3a 8d 28 89 3c b7 30 f1 b4 5e ce 09 83 01 05  63 eb c8 54 // Bcast from Thu Jun 20 05:20:00 2024
+ d7 c6 d1 ed 6e 6a 86 96 1f b1 08 e8 4a 8b 9b 27  be 5d 7f f3 // Bcast from Thu Jun 20 05:30:00 2024
+ cc be 68 fe de 8a 94 bd 26 d2 01 df f8 3f d9 c7  de 46 13 d2 // Bcast from Thu Jun 20 05:40:00 2024
+ 13 90 db 43 66 5a 0d e4 72 13 14 d0 3b 9a d8 41  40 6a 56 0f // Bcast from Thu Jun 20 05:50:00 2024
+ a2 f4 05 d6 a8 e3 10 f4 bf 57 8b 7d 45 d9 53 6d  64 6f 2b 49 // Bcast from Thu Jun 20 06:00:00 2024
+ 69 16 9b a0 82 3a 06 5d a8 c8 68 4b c9 8d 8a 5f  5b c0 0e 3f // Bcast from Thu Jun 20 06:10:00 2024
+ 87 00 76 89 31 e3 39 aa 53 6b eb d7 a4 72 c8 97  d2 59 e0 24 // Bcast from Thu Jun 20 06:20:00 2024
+ c2 72 a9 ad fb 48 b4 7d 2e 60 ed e1 40 f7 6a c0  d7 5f b8 27 // Bcast from Thu Jun 20 06:30:00 2024
+ a9 3f ea df 57 81 6a 53 ef 9f f0 bb 6f 59 fe 54  83 cf 11 b9 // Bcast from Thu Jun 20 06:40:00 2024
+ c8 30 9b 6f 01 e5 60 7c fb 4b c3 53 1f 9c ac 6f  62 ea 17 ac // Bcast from Thu Jun 20 06:50:00 2024
+ ef 0a f4 00 b5 01 88 cf 77 6d e2 b7 e3 7b 9d 6e  b3 33 e2 2d // Bcast from Thu Jun 20 07:00:00 2024
+ 0b f3 34 5c 68 8e cb 2f 8f b6 2e 03 3a 54 b1 59  d8 75 01 d1 // Bcast from Thu Jun 20 07:10:00 2024
+ f6 e1 cb 74 5f 0d b0 d4 9c a5 d1 55 0d 60 b3 b5  dc eb 3f d6 // Bcast from Thu Jun 20 07:20:00 2024
+ 95 12 b4 d2 59 13 23 ed 4f f4 8a 98 25 5a 43 00  14 7c 38 13 // Bcast from Thu Jun 20 07:30:00 2024
+ de bc e0 67 de 2a 7d 97 fb f0 8b 1c 07 8b e9 54  ca 4c 98 61 // Bcast from Thu Jun 20 07:40:00 2024
+ f0 7a 69 72 1e 3c dd 63 08 65 0c 31 b9 47 a4 51  6b a6 ac f7 // Bcast from Thu Jun 20 07:50:00 2024
+ 1e 9a 8d 26 1d c4 28 b7 35 16 33 01 1c 53 84 1d  45 96 21 23 // Bcast from Thu Jun 20 08:00:00 2024
+ 20 4a f7 59 5b 50 38 72 7e 3d f6 a1 61 0d af 17  a1 56 51 8f // Bcast from Thu Jun 20 08:10:00 2024
+ 08 d6 97 75 f0 56 a8 1e 04 e5 54 0d e1 b0 ae 02  0c db 00 de // Bcast from Thu Jun 20 08:20:00 2024
+ 4f e2 14 07 ab 6d da 98 53 28 f1 28 1f ab 32 38  ea f5 6e 45 // Bcast from Thu Jun 20 08:30:00 2024
+ 60 71 f2 73 ee 63 25 84 b8 9e 92 e3 f9 e5 5c 75  35 79 c4 85 // Bcast from Thu Jun 20 08:40:00 2024
+ 13 f5 9e 8e e2 57 78 c5 6a 58 f3 fb 4d dc 29 05  b7 70 8b 48 // Bcast from Thu Jun 20 08:50:00 2024
+ 33 be 2e 51 1e 33 52 42 a2 ea 3e 15 18 af 87 7f  01 f5 15 30 // Bcast from Thu Jun 20 09:00:00 2024
+ a4 67 70 65 95 f8 4d 8e 78 81 15 0d d3 11 31 26  76 0e 33 b7 // Bcast from Thu Jun 20 09:10:00 2024
+ 22 35 59 f8 9a c1 d1 74 4a cd ca 4f 72 ac 94 43  c2 6d cc 7e // Bcast from Thu Jun 20 09:20:00 2024
+ 5c 6c 16 c0 fa 0c 0f 0f 15 af 94 e8 49 98 6a ad  f8 b5 c0 a3 // Bcast from Thu Jun 20 09:30:00 2024
+ ab b5 24 fe 2d bf 4f 38 4b 11 5e 26 74 c6 7e 7d  6d 8f f3 e5 // Bcast from Thu Jun 20 09:40:00 2024
+ 57 aa b8 f3 72 dc 00 af e0 59 bb 7d f1 50 e7 bc  f7 5d 03 b7 // Bcast from Thu Jun 20 09:50:00 2024
+ a9 ff 6a 41 a9 3c a7 9c b8 7d e6 7b e8 7d 49 e7  fc 8b 47 8f // Bcast from Thu Jun 20 10:00:00 2024
+ a7 16 99 4d 0e 2a ae d2 7c ae 7b f2 f1 98 a5 4b  d7 90 55 da // Bcast from Thu Jun 20 10:10:00 2024
+ f1 46 79 39 9f 99 18 ae f5 1e a0 b5 98 55 24 fc  9a 19 d5 5c // Bcast from Thu Jun 20 10:20:00 2024
+ 15 64 b4 5e 20 98 be 8d f0 4d bc e7 a0 03 df ee  8e e2 09 cd // Bcast from Thu Jun 20 10:30:00 2024
+ 4e a6 07 5c 13 56 2d 7b 32 b7 e4 b2 66 e6 38 55  d7 41 73 34 // Bcast from Thu Jun 20 10:40:00 2024
+ 1b db 67 fc 5e ae 2d c7 b6 56 b8 fc 94 27 c0 58  20 9c 4f bc // Bcast from Thu Jun 20 10:50:00 2024
+ d2 af a9 e4 f1 6f 5a 90 35 ff 1a 95 86 72 7d 2e  8d 53 bf c3 // Bcast from Thu Jun 20 11:00:00 2024
+ bc 30 35 87 87 a8 af 48 09 dc 75 17 01 70 ea 85  20 3c b4 51 // Bcast from Thu Jun 20 11:10:00 2024
+ ae db 21 9e 0f 57 85 f3 eb b4 b0 34 5c 49 69 70  77 b1 7c 7e // Bcast from Thu Jun 20 11:20:00 2024
+ ab 15 14 03 47 76 77 75 25 0c b3 4b 4d 1f d0 91  7a 52 d9 56 // Bcast from Thu Jun 20 11:30:00 2024
+ c2 1d 1a 80 b6 a2 a8 4e 8f d0 37 af a4 64 b8 b1  8d 4a 48 15 // Bcast from Thu Jun 20 11:40:00 2024
+ 22 90 98 e8 75 e2 38 8f 5b b2 fc 15 10 71 fd 85  ab cf 4f 3a // Bcast from Thu Jun 20 11:50:00 2024
+ 9c 37 33 62 d1 59 ce 01 43 f4 f5 fa 7d f6 1f f8  c3 70 ed 13 // Bcast from Thu Jun 20 12:00:00 2024
+ 72 19 ae 1e e0 d8 07 36 6d 64 2c 86 11 b1 9a 47  af 32 e6 15 // Bcast from Thu Jun 20 12:10:00 2024
+ c0 92 d6 25 ca 7a 4d 9c fe 99 b6 b2 bc ed 5c 88  78 ec 82 2a // Bcast from Thu Jun 20 12:20:00 2024
+ 90 58 46 13 ed 77 73 29 28 dd b3 e2 47 2f c3 0b  96 80 58 02 // Bcast from Thu Jun 20 12:30:00 2024
+ c6 be cb 83 04 65 cc 00 4a 00 0d 8a b7 57 75 2c  96 a8 b1 24 // Bcast from Thu Jun 20 12:40:00 2024
+ a4 78 f0 f0 ab 89 7a b1 45 69 59 a2 df 9a 16 3e  a0 ae 1c 19 // Bcast from Thu Jun 20 12:50:00 2024
+ aa d5 68 93 56 5a 95 6e 2d af 17 1c e0 4e 02 ca  7e 3d de cf // Bcast from Thu Jun 20 13:00:00 2024
+ 19 83 d7 33 41 bf 37 23 e2 0f 03 4e 32 0e 9e b1  f8 37 44 c0 // Bcast from Thu Jun 20 13:10:00 2024
+ bc 63 12 3e 31 82 1f 03 da ae 3d fb c5 fb 65 53  a5 b2 81 ed // Bcast from Thu Jun 20 13:20:00 2024
+ 5b dd 80 6d 7e 6e f2 1b c8 8f ff 7a dc bd f3 7f  71 e4 1c d0 // Bcast from Thu Jun 20 13:30:00 2024
+ 8e dc 3c 65 a7 0e 84 53 ad e7 af c3 06 ba 9c 70  c1 ee e7 b5 // Bcast from Thu Jun 20 13:40:00 2024
+ 17 17 23 4f fd 61 d0 c9 ea 69 9a 9c 9e 11 9f ec  c6 58 b6 3e // Bcast from Thu Jun 20 13:50:00 2024
+ bc 89 ad 38 3d cf 1d b2 ea f3 ca d1 74 84 f3 64  c1 4d e8 f8 // Bcast from Thu Jun 20 14:00:00 2024
+ 27 66 4a d2 09 10 13 af 85 66 b8 82 03 6b 14 d6  97 ae 63 b5 // Bcast from Thu Jun 20 14:10:00 2024
+ 72 ef 48 5e 8d f2 6a 03 b3 ec 59 e2 9b 69 50 8f  74 0b 5d a3 // Bcast from Thu Jun 20 14:20:00 2024
+ 74 74 00 f1 5b 88 b3 8f 6d 71 e2 a0 6b 0a 3c e9  21 e6 6a 8e // Bcast from Thu Jun 20 14:30:00 2024
+ bd 8b 65 68 63 c9 f3 d6 c0 d0 84 69 e1 5e bc 8f  ef c2 d9 32 // Bcast from Thu Jun 20 14:40:00 2024
+ 04 d7 ab 20 8a 3c 70 73 7d a2 fa 7c 55 5f 1a 61  a4 af 4d 6d // Bcast from Thu Jun 20 14:50:00 2024
+ 89 c5 c7 3b 97 04 f1 68 21 e2 af f9 25 5c fa 05  4b e7 0f 82 // Bcast from Thu Jun 20 15:00:00 2024
+ 28 57 42 4e a2 7e 3c 9d cd 98 13 b3 6d ac 71 47  13 46 44 55 // Bcast from Thu Jun 20 15:10:00 2024
+ f5 9b 7c c0 97 0b 53 45 08 79 84 4a a8 fe 55 51  5c 60 c5 fd // Bcast from Thu Jun 20 15:20:00 2024
+ dc cb 2a 34 d8 90 ee b4 3e 38 a1 c3 76 a0 fa b1  d0 57 63 8a // Bcast from Thu Jun 20 15:30:00 2024
+ e4 05 ba f9 0d 17 06 38 b3 08 35 84 e3 dc 56 56  df 6c ec 69 // Bcast from Thu Jun 20 15:40:00 2024
+ 99 85 3e 9d e9 93 44 9a 1f a3 8d 14 20 43 73 9f  3d c5 c7 75 // Bcast from Thu Jun 20 15:50:00 2024
+ 7b 3f 86 da 5a 41 76 fe 09 22 97 dc ff 01 52 87  1d 82 cb 09 // Bcast from Thu Jun 20 16:00:00 2024
+ 01 0c 83 3e c3 af c9 a1 fd 17 4e b0 b3 46 89 d3  e5 b8 5c ff // Bcast from Thu Jun 20 16:10:00 2024
+ 7d 55 27 ce e8 d6 68 94 f7 78 e7 87 5b db 43 63  c2 eb b4 68 // Bcast from Thu Jun 20 16:20:00 2024
+ b4 53 41 90 d7 8f b4 95 8a f6 57 df 9e 72 30 ba  0c c1 1b ca // Bcast from Thu Jun 20 16:30:00 2024
+ 94 0a 9c 36 c6 31 c4 fb 4d 7b f8 4f 65 2f 92 f6  5e f4 cd 28 // Bcast from Thu Jun 20 16:40:00 2024
+ c6 ff 2c cb b9 0a 55 51 7f 47 c3 92 d9 fe 15 f6  ca f2 1c 0b // Bcast from Thu Jun 20 16:50:00 2024
+ 67 64 97 bf 52 18 13 6c 77 d0 9a a1 e6 a5 5f 9d  f2 a2 64 cf // Bcast from Thu Jun 20 17:00:00 2024
+ 63 5b 4f 11 9e 1e 48 90 a8 ed 22 97 58 78 60 6c  0b 4d 3a 0e // Bcast from Thu Jun 20 17:10:00 2024
+ 64 2e 72 da 1a 34 40 70 6c 38 d4 e4 11 21 b9 67  40 15 03 e7 // Bcast from Thu Jun 20 17:20:00 2024
+ 4a 05 ba e4 c9 a1 e9 68 be c2 ed 38 aa 46 a5 a4  e2 f8 8c d8 // Bcast from Thu Jun 20 17:30:00 2024
+ 35 8b 94 f8 ec bd 03 15 9a 71 81 09 79 3b ea 45  cc 1e 8e fa // Bcast from Thu Jun 20 17:40:00 2024
+ ea 82 94 c4 05 52 32 1d 47 cc 40 28 b9 fc ad 96  bf 92 bc e7 // Bcast from Thu Jun 20 17:50:00 2024
+ f7 a5 4a d5 9b f3 d8 2b 4c 52 ac 7c b3 c0 54 fd  80 10 83 2f // Bcast from Thu Jun 20 18:00:00 2024
+ d7 bc bd 71 2f b7 46 2f 50 f1 2e 33 e9 f0 39 43  91 e4 dd b2 // Bcast from Thu Jun 20 18:10:00 2024
+ 0e 62 da 82 5b ce 0a 09 d6 33 25 2f e2 c9 b3 d6  b0 f9 e7 ec // Bcast from Thu Jun 20 18:20:00 2024
+ eb fa a2 a2 9f 51 03 7c 37 cb 73 5b 61 2e 8c 73  05 2e 31 1d // Bcast from Thu Jun 20 18:30:00 2024
+ f3 58 31 c8 58 92 e8 4b 60 e1 f1 d9 1f 17 a3 b5  4b 5c 57 63 // Bcast from Thu Jun 20 18:40:00 2024
+ 9b 98 2c 9c 76 24 65 95 31 ad 90 6b ce 4f 94 76  fd 6a ec df // Bcast from Thu Jun 20 18:50:00 2024
+ e7 e6 b4 d3 c9 27 9c 56 e4 c6 f5 21 45 65 5f bb  1b f6 34 d1 // Bcast from Thu Jun 20 19:00:00 2024
+ ed 24 fe a9 a2 e2 33 99 40 f9 55 f1 f1 99 ee c3  75 13 da 86 // Bcast from Thu Jun 20 19:10:00 2024
+ 1c 23 30 a0 9d a3 46 db 70 a2 84 23 41 ad c9 31  fd 0f 1e 16 // Bcast from Thu Jun 20 19:20:00 2024
+ 99 c3 05 0f c7 66 d8 5f 03 23 7f cf ae 35 22 7f  84 f2 de 52 // Bcast from Thu Jun 20 19:30:00 2024
+ 45 d3 42 a5 98 f7 63 23 67 e2 c4 60 f1 c8 7f 04  7c 1f 27 48 // Bcast from Thu Jun 20 19:40:00 2024
+ 43 e7 c1 ab 81 7a ad 20 ef 21 f6 98 73 47 f8 8f  68 a5 b1 77 // Bcast from Thu Jun 20 19:50:00 2024
+ 99 c2 8b 55 95 a5 7e b7 29 4f bd 14 9d 99 54 05  3b 5a e9 ec // Bcast from Thu Jun 20 20:00:00 2024
+ 08 ff 7c 0c 71 95 27 42 df 3c fc 68 bb eb 76 84  31 13 de 74 // Bcast from Thu Jun 20 20:10:00 2024
+ e0 84 5c 25 3a 6b 2b 75 0b 10 76 90 e4 e1 35 6c  4b 7a 88 e4 // Bcast from Thu Jun 20 20:20:00 2024
+ a6 b3 1d 34 d7 e7 b4 6b d2 68 5c 2f 54 38 fe 2f  e5 b5 3b cb // Bcast from Thu Jun 20 20:30:00 2024
+ d9 6f 40 7b 42 bf 8b b4 bc df bf a3 d0 5b a8 18  c8 0c 25 5a // Bcast from Thu Jun 20 20:40:00 2024
+ ee 11 8e 8a 99 dd d9 11 ee c0 ec a1 fe d9 a4 68  7a 92 22 f3 // Bcast from Thu Jun 20 20:50:00 2024
+ af 0b d7 a6 95 8d 94 f4 4a c4 b1 7b 53 26 ba de  3b f9 3a 75 // Bcast from Thu Jun 20 21:00:00 2024
+ 24 4b 95 d8 11 f7 c7 6c 0c d5 17 29 60 2a eb dc  c5 77 c8 9f // Bcast from Thu Jun 20 21:10:00 2024
+ e2 27 fa 7e 58 d5 7e 8f d7 90 7c cc fa 9b ef 36  82 03 db 62 // Bcast from Thu Jun 20 21:20:00 2024
+ 28 c0 b7 ca 10 c0 c9 9f 49 62 7c d4 22 95 b6 38  d6 c3 8c ff // Bcast from Thu Jun 20 21:30:00 2024
+ 44 15 4b cd 0f cb 78 bf 0f ba 5a a8 4d c7 84 51  d3 59 c3 8d // Bcast from Thu Jun 20 21:40:00 2024
+ 4f 94 4a d1 37 a1 06 a7 52 d6 fb 7c 1d fe b3 c0  77 be aa ce // Bcast from Thu Jun 20 21:50:00 2024
+ 70 20 9c c4 af 4b e5 ea ed eb ef d8 83 da fa f4  63 94 40 0e // Bcast from Thu Jun 20 22:00:00 2024
+ e9 c7 e3 c7 6a 05 89 86 db 31 3b 0e a2 8d 93 25  ac ad ce 74 // Bcast from Thu Jun 20 22:10:00 2024
+ b9 c2 d0 df ec d9 1b ce d7 45 17 83 62 ab 7c d3  cd 88 82 c0 // Bcast from Thu Jun 20 22:20:00 2024
+ 77 11 70 ba f1 7a e6 66 6f 2a e7 74 f9 34 06 05  2a 64 d6 17 // Bcast from Thu Jun 20 22:30:00 2024
+ a7 78 11 5d d2 5a 71 e3 2b 5b e5 c8 8b 7d 75 95  2f 78 f3 46 // Bcast from Thu Jun 20 22:40:00 2024
+ 6f 10 06 27 fb f5 ae 79 97 be 50 9a 68 1e 9f ce  71 12 a0 7d // Bcast from Thu Jun 20 22:50:00 2024
+ c8 a1 4f fb e5 d3 2a 60 40 80 0d 7d fe c4 18 63  b9 85 eb 91 // Bcast from Thu Jun 20 23:00:00 2024
+ 29 49 86 7c 55 a8 29 95 79 55 f7 e3 05 75 bc 58  0e 14 25 5b // Bcast from Thu Jun 20 23:10:00 2024
+ a3 a4 2e 97 9b 05 31 81 69 9c 53 4b 19 b3 14 14  1d 2f 7e 8b // Bcast from Thu Jun 20 23:20:00 2024
+ b7 26 a7 5b 9c 4d 61 26 c7 87 c4 d1 13 9c 4a c6  ef 8a 64 ef // Bcast from Thu Jun 20 23:30:00 2024
+ 0f 81 c8 91 ac 35 67 8b bd 39 de da c0 ff de 46  fb e8 1d 48 // Bcast from Thu Jun 20 23:40:00 2024
+ ed 80 e3 91 50 43 83 6d cd 45 fc 8b b6 ba 66 a8  02 71 a9 5a // Bcast from Thu Jun 20 23:50:00 2024
