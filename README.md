@@ -1,4 +1,4 @@
-== Backend
+## Backend
 
 This repository contains some testing and test tools for the backend that
 were useful during development.
@@ -13,14 +13,14 @@ otherwise indicated. Certain logos, fonts, marks and other insignia
 cannot be used without permission of the Staat der Nederlanden. Further
 details can be found at the above URL.
 
-== Bug reports and contributions.
+## Bug reports and contributions.
 
 For bug reports, feedback, suggestions and contributions are most welcome; 
 see the above URL and then file your issue / pull request at:
 
    https://github.com/minvws/nl-contact-tracing-app-odds-and-ends
 
-== Security 
+## Security 
 
 For security reports - see the security tab at:
 
